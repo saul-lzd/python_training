@@ -64,6 +64,8 @@ def login():
             response = make_response(redirect(url_for('index')))
             return response
        '''
+        Get parameters from GET request
+        -------------------------------
         # args is a dictionary object
         # containing form pair-values
         user = request.args.get('name')
