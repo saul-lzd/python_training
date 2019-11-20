@@ -1,0 +1,14 @@
+{% extends 'template.html' %}
+
+{% block content %}
+<p>People: </p>
+<ul>
+    {% for p in people %}
+    <li>{{p.id}} - {{p.name}}</li>
+    {% endfor %}
+</ul>
+
+<a href='{{url_for("home_2")}}'>
+    <button>Go back</button>
+</a>
+{% endblock %}

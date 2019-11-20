@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<h1>{% block title %}Log In{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<div id='login-container'>
+    <form method='post'>
+        <div class="form-group">
+            <label for="exampleInputEmail1">User</label>
+            <input type="text" name='username' required class="form-control" id="user-name" aria-describedby="username"
+                placeholder="Username">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" name='password' required class="form-control" id="password" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock%}

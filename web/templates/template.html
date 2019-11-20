@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flask App</title>
+    <script type="text/javascript" src="{{url_for('static', filename='javascript.js')}}"></script>
+</head>
+
+<body>
+
+    <div
+        style="border: 1px solid gray; width: 800px; height: 600px; margin-left: auto; margin-right: auto; margin-top: 10%;">
+        <input type="button" onclick="sayHello()" value="Say Hello from JS" />
+        <a href='{{url_for("logout")}}'>
+            <button>Logout</button>
+        </a>
+        <div id="errors">
+            {% for message in get_flashed_messages() %}
+            <p style="color:red"> {{message}} </p>
+            {% endfor %}
+        </div>
+
+        {% block content %}
+        <p>I'm your father</p>
+        {% endblock %}
+    </div>
+
+</body>
+
+</html>
